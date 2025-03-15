@@ -1485,8 +1485,8 @@ function newCards(a) {
     elanlar.style.display = 'block'
     elanlar.innerHTML = `<div id="none-box">
             <img src="none.png" alt="" id="none">
-            <p style="color: #212c3a;">Təəssüf ki, axtarışınız əsasında heç nə tapılmadı.</p>
-            <p style="color: #8d94ad;">Zəhmət olmasa, daha uyğun axtarış filtrləri seçin.</p>
+            <p style="color: #212c3a;text-align: center">Təəssüf ki, axtarışınız əsasında heç nə tapılmadı.</p>
+            <p style="color: #8d94ad;text-align: center">Zəhmət olmasa, daha uyğun axtarış filtrləri seçin.</p>
         </div>`
     return
   }
