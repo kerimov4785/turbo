@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turbo2.az</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="header-style.css">
+    <link rel="stylesheet" href="main-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="bgcolorgray">
+            <nav class="nav1 container">
+                <div class="nav1-col1">
+                    <a href="">Tap.az</a>
+                    <a href="">Bina.az</a>
+                    <a href="">Boss.az</a>
+                </div>
+                <div class="nav1-col2">
+                    <a href="tel:(012)5264747"><span style="color: black;">Dəstək: </span><span id="telefon">(012)
+                            526-47-47</span></a>
+                    <a href="">Yardim</a>
+                    <a href="">RU</a>
+                    <a onclick="showLikedCars()" style="cursor: pointer;"><i
+                            class="fa-solid fa-heart"></i>Secilmisler</a>
+                    <a href="" style="display: flex;align-items: center;"><i
+                            class="fa-solid fa-circle-user"></i>Giris</a>
+                </div>
+            </nav>
+        </div>
+        <div class="bgcolorred">
+            <nav class="nav2 container">
+                <div class="nav2-col1">
+                    <a href="" id="logo">TURBO.AZ</a>
+                    <a href="">Bütün elanlar</a>
+                    <a href="">Dilerlər</a>
+                    <a href="">Avtokataloq</a>
+                    <a href="">Moto</a>
+                    <div href="" id="aksesuar">
+                        <a href="">Ehtiyat hissələr və aksesuarlar</a>
+                        <div class="dropdown1">
+                            <a href="">Aksesuarlar</a>
+                            <a href="">Audio və video texnika</a>
+                            <a href="">Avtokosmetika və avtokimya</a>
+                            <a href="">Ehtiyat hissələr</a>
+                            <a href="">GPS naviqatorlar</a>
+                            <a href="">Qeydiyyat nişanları</a>
+                            <a href="">Siqnalizasiyalar</a>
+                            <a href="">Videoqeydiyyatçılar</a>
+                            <a href="">Şinlər, disklər və təkərlər</a>
+                            <a href="">Digər</a>
+                        </div>
+                    </div>
+                    <div href="" id="icare">
+                        <a href="">İcarə</a>
+                        <div class="dropdown2">
+                            <a href="">Avtomobillər</a>
+                            <a href="">Avtobus və mikroavtobuslar</a>
+                            <a href="">Motosiklet və mopedlər</a>
+                            <a href="">Xüsusi texnika</a>
+                            <a href="">Digər</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="yeni_elan.html" target="_blank" id="newElan"><i class="fa-solid fa-circle-plus"></i>Yeni
+                    elan</a>
+            </nav>
+        </div>
+        <nav class="nav-mobile container">
+            <a href="" id="logo-mobile">TURBO.AZ</a>
+            <a href="">BINA.AZ</a>
+            <a href="">TAP.AZ</a>
+        </nav>
+    </header>
+    <main>
+        <div style="background-color: #ecedf2;">
+            <div id="filter" class="container">
+                <div class="input">
+                    <input id="marka" oninput="searchBrand()" type="text" class="marka" placeholder="Marka">
+                    <div class="inputTitle">Marka</div>
+                    <label for="marka">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                    <div class="dropdownInput">
+                    </div>
+                </div>
+                <div class="input2">
+                    <input id="model" oninput="searchBrand()" type="text" class="model" placeholder="Model">
+                    <div class="inputTitle2">Model</div>
+                    <div class="disabled"></div>
+                    <label for="model">
+                        <i class="fa-solid fa-chevron-down down2"></i>
+                    </label>
+                    <div class="dropdownInput2">
+                    </div>
+                </div>
+                <div class="input3">
+                    <input type="text" id="input3" value="Hamisi">
+                    <input name="type" type="radio" id="type1">
+                    <label for="type1" class="type_1" onclick="selectType()">Hamisi</label>
+                    <input name="type" type="radio" id="type2">
+                    <label for="type2" class="type_2" onclick="selectType()">Yeni</label>
+                    <input name="type" type="radio" id="type3">
+                    <label for="type3" class="type_3" onclick="selectType()">Surulmus</label>
+                </div>
+                <div class="input4">
+                    <input id="seher" class="seher" type="text" placeholder="Seher">
+                    <div class="inputTitle4">Seher</div>
+                    <label for="seher">
+                        <i class="fa-solid fa-chevron-down down4"></i>
+                    </label>
+                    <div class="dropdownInput4">
+                    </div>
+                </div>
+                <div class="input5">
+                    <input type="text" class="min_price" id="min" oninput="showDelete('min_price','delete1')"
+                        onblur="title_remove('min_price','input_title5')" onfocus="title_add('input_title5')">
+                    <label class="input_title5" for="min">Qiymet, min.</label>
+                    <div class="delete_price" id="delete1" onclick="deleteIcon('delete1','input_title5','min_price')"><i
+                            class="fa-solid fa-xmark miniX"></i></div>
+                    <input type="text" class="max_price" id="max" oninput="showDelete('max_price','delete2')"
+                        onblur="title_remove('max_price','input_title5_5')" onfocus="title_add('input_title5_5')">
+                    <label class="input_title5_5" for="max">maks.</label>
+                    <div class="delete_price" id="delete2" onclick="deleteIcon('delete2','input_title5_5','max_price')">
+                        <i class="fa-solid fa-xmark miniX"></i>
+                    </div>
+                </div>
+                <div class="input6">
+                    <div class="currency-box" id="currency-box">
+                        <p id="currency">AZN</p>
+                        <i id="down4" class="fa-solid fa-chevron-down down6"></i>
+                        <div class="dropdownInput6">
+                            <p id="cur1" onmousedown="selectCurrency('cur1')">AZN</p>
+                            <p id="cur2" onmousedown="selectCurrency('cur2')">USD</p>
+                            <p id="cur3" onmousedown="selectCurrency('cur3')">EUR</p>
+                        </div>
+                    </div>
+                    <div class="kredit">Kredit</div>
+                    <div class="barter">Barter</div>
+                </div>
+                <div class="input7">
+                    <input id="ban" class="ban" type="text" placeholder="Ban novu">
+                    <div class="inputTitle7">Ban novu</div>
+                    <label for="ban">
+                        <i class="fa-solid fa-chevron-down down7"></i>
+                    </label>
+                    <div class="dropdownInput7">
+                    </div>
+                </div>
+                <div class="input8">
+                    <div class="min_year_box">
+                        <div class="min_year" onclick="showYearList('dropdownInput8')">Il, min.</div>
+                        <div class="inputTitle8">Il, min.</div>
+                        <i class="fa-solid fa-chevron-down down8" onclick="showYearList('dropdownInput8')"></i>
+                        <div class="dropdownInput8">
+                        </div>
+                    </div>
+                    <div class="max_year_box">
+                        <div class="max_year" onclick="showYearList2('dropdownInput8_8')">maks.</div>
+                        <div class="inputTitle8_8">maks.</div>
+                        <i class="fa-solid fa-chevron-down down8_8" onclick="showYearList2('dropdownInput8_8')"></i>
+                        <div class="dropdownInput8_8">
+                        </div>
+                    </div>
+                </div>
+                <div class="plus plus-none">
+                    <div class="plus-1">
+                        <div class="input9">
+                            <input type="text" class="inputNone" placeholder="Reng">
+                            <label>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                        </div>
+                        <div class="input9">
+                            <input type="text" class="inputNone" placeholder="Yanacag novu">
+                            <label>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                        </div>
+                        <div class="input9">
+                            <input type="text" class="inputNone" placeholder="Oturucu">
+                            <label>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                        </div>
+                        <div class="input9">
+                            <input type="text" class="inputNone" placeholder="Suretler qutusu">
+                            <label>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                        </div>
+                        <div class="input10">
+                            <input class="inputNone"
+                                style="border-bottom-right-radius: 0px;border-top-right-radius: 0px;"
+                                placeholder="Hecm(sm3),min.">
+                            <input class="inputNone" style="border-bottom-left-radius: 0px;border-top-left-radius: 0px;"
+                                placeholder="maks">
+                        </div>
+                        <div class="input10">
+                            <input class="inputNone"
+                                style="border-bottom-right-radius: 0px;border-top-right-radius: 0px;"
+                                placeholder="Guc(a. g.),min.">
+                            <input class="inputNone" style="border-bottom-left-radius: 0px;border-top-left-radius: 0px;"
+                                placeholder="maks">
+                        </div>
+                        <div class="input10">
+                            <input class="inputNone"
+                                style="border-bottom-right-radius: 0px;border-top-right-radius: 0px;"
+                                placeholder="Yurus(km),min.">
+                            <input class="inputNone" style="border-bottom-left-radius: 0px;border-top-left-radius: 0px;"
+                                placeholder="maks">
+                        </div>
+                        <div class="input11">
+                            <label style="background-color: #b61318;color: white;">Hamisi</label>
+                            <label class="type_2">Dilerler</label>
+                            <label>Sexsi</label>
+                        </div>
+                        <div class="input9">
+                            <input type="text" class="inputNone" placeholder="Sahiblerin sayi">
+                            <label>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                        </div>
+                        <div class="input9">
+                            <input type="text" class="inputNone" placeholder="Yerlerin sayi">
+                            <label>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                        </div>
+                        <div class="input9">
+                            <input type="text" class="inputNone" placeholder="Hansi bazar ucun yigilib">
+                            <label>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                        </div>
+                        <div style="display: flex; gap: 12px;">
+                            <div class="abc" id="abc1">Vurugu yoxdur</div>
+                            <div class="abc" id="abc1">Renglenmeyib</div>
+                            <div class="abc" id="abc1">Yalniz gezali avtomoniller</div>
+                            <div class="input9">
+                                <input type="text" class="inputNone" placeholder="Status">
+                                <label>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plus-2">
+                        <p style="font:400 15px helvetica;color: #212c3a;margin:14px 3px;">Avtomobilin təchizatı</p>
+                        <div>
+                            <div class="abc">Yungul lehimli diskler</div>
+                            <div class="abc">ABS</div>
+                            <div class="abc">Lyuk</div>
+                            <div class="abc">Yagis sensoru</div>
+                            <div class="abc">Merkezi qapanma</div>
+                            <div class="abc">Park radari</div>
+                            <div class="abc">Kondisioner</div>
+                            <div class="abc">Oturacaglarin isidilmesi</div>
+                            <div class="abc">Deri salon</div>
+                            <div class="abc">Ksenon</div>
+                            <div class="abc">Lampalar</div>
+                            <div class="abc">Yan perdeler</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div id="filter2" class="container">
+                <p style="color:#212c3a" id="bugun">Bu gun: <span id="elan-kol">46 yeni elan</span></p>
+                <div class="goster-box">
+                    <p id="filter-none">Sifirla</p>
+                    <p id="more-filter" onclick="moreFilter()">Daha cox filter <i
+                            class="fa-solid fa-chevron-down down9"></i></p>
+                    <p id="button-elan">Elanlari goster</p>
+                </div>
+            </div>
+             <div class="bg-color" id="title-main">
+                <p class="container">ELANLAR</p>
+            </div>
+        </div>
+        <div id="sec_title">
+            <p class="container">Seçilmiş elanlar</p>
+        </div>
+        <div class="bgcolorgray">
+            <div id="secilmis_cars_box" class="container ">
+            </div>
+        </div>
+        <div class="bgcolorgray">
+            <div class="elanlar container">
+            </div>
+        </div>
+    </main>
+    <!-- <footer>
+        <div class="container" style="display: flex;justify-content: space-between;align-items: center;">
+            <p style="width: 350px;">Saytın Administrasiyası reklam bannerlərinin və yerləşdirilmiş elanların məzmununa
+                görə məsuliyyət
+                daşımır.
+            </p>
+            <p>2006-2025 Digital Classifieds MMC. VÖEN: 1405631661</p>
+        </div>
+    </footer> -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

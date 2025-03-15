@@ -1,0 +1,172 @@
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.nav1 a,
+.nav2 a {
+    font: 400 15px Helvetica;
+    transition: .2s;
+}
+
+.nav1 div>a {
+    color: #8d94ad;
+}
+
+.nav2 div>a {
+    color: white;
+}
+
+.nav2-col1>a,
+#aksesuar,
+#icare {
+    padding: 19px 0;
+}
+
+.bgcolorgray {
+    background-color: #f6f7fb;
+}
+
+.bgcolorred {
+    background-color: #ca0f16;
+}
+
+.nav1 {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 60px; */
+    display: flex;
+}
+
+.nav1-col1,
+.nav1-col2,
+.nav2-col1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#telefon {
+    color: black;
+}
+
+.fa-heart {
+    margin-right: 10px;
+}
+
+.fa-circle-plus {
+    margin-right: 7px;
+}
+
+.fa-circle-user {
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+.nav1 div>a:hover,
+#telefon:hover {
+    color: #ca1016;
+}
+
+.nav2>div>a:hover,
+#aksesuar>a:hover {
+    color: #f5cecd;
+}
+
+#logo {
+    font: 700 18px Helvetica;
+    margin-right: 12px;
+    color: white;
+}
+
+#newElan {
+    background-color: #7ed321;
+    padding: 13px 11px;
+    border-radius: 7px;
+    align-content: center;
+    color: white;
+    transition: .3s;
+}
+
+#newElan:hover {
+    background-color: #85c01f;
+}
+
+#aksesuar,
+#icare {
+    position: relative;
+}
+
+#aksesuar:hover .dropdown1,
+#icare:hover .dropdown2 {
+    display: flex;
+}
+
+.dropdown1,
+.dropdown2 {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 7px;
+    padding: 9px 0;
+    border: solid 1px #dfe3e9;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+    width: 240px;
+    top: 50px;
+    z-index: 100;
+}
+
+.dropdown1 {
+    left: 5px;
+}
+
+.dropdown2 {
+    left: -10px;
+}
+
+.dropdown1>a,
+.dropdown2>a {
+    color: black !important;
+    padding: 9px 12px;
+}
+
+.dropdown1>a:hover,
+.dropdown2>a:hover {
+    background-color: #f6f7fb;
+}
+
+.nav-mobile {
+    display: none;
+    gap: 20px;
+    font: 700 18px helvetica;
+    padding: 20px 0;
+}
+
+.nav-mobile a {
+    color: #8d94ad;
+}
+#logo-mobile {
+    color: #ca1016;
+}
+
+@media only screen and (max-width: 1010px) {
+    .nav1,
+    .nav2 {
+        display: none;
+    }
+    .container{
+        padding-inline:10px;
+    }
+    .nav-mobile{
+        display: flex;
+    }
+    
+}
