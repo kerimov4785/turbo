@@ -617,7 +617,7 @@ footer{
 } 
 .nav-mobile-bottom{
     justify-content: center;
-    position: fixed;
+    position: sticky;
     display: none;
     background-color: white;
     width: 100%;
@@ -702,8 +702,6 @@ footer{
     .nav-mobile-bottom{
         display: flex;
     }
-}
-@media only screen and (max-width: 750px) {
     #secilmis_cars_box{
         justify-content: center;
     }
