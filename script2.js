@@ -17,16 +17,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const dates = params.get("dates");
   
     // Заполняем данные на странице
-    const imageElement = document.getElementById("car-image");
-    document.getElementById("car-brand").innerText = brand;
-    document.getElementById("car-model").innerText = `${model},`;
-    document.getElementById("car-price").innerText = `${price} ${currency}`;
-    document.getElementById("car-year").innerText = `${year} il,`;
-    document.getElementById("car-engine").innerText = engine ? `${engine} L,` : "";
-    document.getElementById("car-odometer").innerText = odometer;
-    document.getElementById("car-odometerUnit").innerText = odometerUnit;
-    document.getElementById("car-city").innerText = city;
-    document.getElementById("car-dates").innerText = dates;
+    const imageElement = document.querySelector(".car-image-ok");
+    document.querySelectorAll(".car-brand")[0].innerText = brand;
+    document.querySelectorAll(".car-brand")[1].innerText = brand;
+    document.querySelectorAll(".car-model")[0].innerText = `${model},`;
+    document.querySelectorAll(".car-model")[1].innerText = `${model},`;
+    document.querySelectorAll(".car-price")[0].innerText = `${price} ${currency}`;
+    document.querySelectorAll(".car-year")[0].innerText = `${year} il,`;
+    document.querySelectorAll(".car-year")[1].innerText = `${year} il,`;
+    document.querySelectorAll(".car-engine")[0].innerText = engine ? `${engine} L,` : "";
+    document.querySelectorAll(".car-odometer")[0].innerText = odometer;
+    document.querySelectorAll(".car-odometer")[1].innerText = odometer;
+    document.querySelectorAll(".car-odometerUnit")[0].innerText = odometerUnit;
+    document.querySelectorAll(".car-city")[0].innerText = city;
+    document.querySelectorAll(".car-city")[1].innerText = city;
+    document.querySelectorAll(".car-dates").innerText = dates;
 
     imageElement.src = imageUrl;
   });

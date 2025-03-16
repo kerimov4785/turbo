@@ -67,47 +67,88 @@
                         </div>
                     </div>
                 </div>
-                <a href="yeni_elan.html" target="_blank" id="newElan"><i class="fa-solid fa-circle-plus"></i>Yeni elan</a>
+                <a href="yeni_elan.html" target="_blank" id="newElan"><i class="fa-solid fa-circle-plus"></i>Yeni
+                    elan</a>
             </nav>
         </div>
+        <nav class="nav-mobile container">
+            <a href="index.html" id="logo-mobile">TURBO.AZ</a>
+            <a href="">BINA.AZ</a>
+            <a href="">TAP.AZ</a>
+        </nav>
     </header>
-    <div class="container" style="padding-bottom: 40px;">
-        <div class="card-title">
-            <h1 id="car-brand"></h1>
-            <p id="car-model"></p>
-            <p id="car-engine" class="car-engine"></p>
-            <p id="car-year"></p>
-            <p id="car-odometer"></p>
-            <p id="car-odometerUnit"></p>
-        </div>
-        <div class="about-car">
-            <img id="car-image" alt="Фото машины" />
-            <div class="elage">
-                <p id="car-price"></p>
-                <div class="person">
-                    <div>
-                        <p>Emil</p>
-                        <p id="car-city" style="font-size: 13px;color: #7e7e7e;"></p>
+    <main>
+        <div class="container" style="padding-bottom: 40px;">
+            <div class="card-title">
+                <h1 class="car-brand"></h1>
+                <p class="car-model"></p>
+                <p class="car-engine" class="car-engine"></p>
+                <p class="car-year"></p>
+                <p class="car-odometer"></p>
+                <p class="car-odometerUnit"></p>
+            </div>
+            <div class="about-car">
+                <img class="car-image-ok" alt="Фото машины" />
+                <div id="car-info">
+                    <div class="elage">
+                        <p class="car-price"></p>
+                        <div class="person">
+                            <div>
+                                <p>Emil</p>
+                                <p class="car-city" style="font-size: 13px;color: #7e7e7e;"></p>
+                            </div>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="nomre">
+                            <p>Nomreni goster</p>
+                            <h4>(070) 300-03-..</h4>
+                        </div>
                     </div>
-                    <i class="fa-solid fa-user"></i>
-                </div>
-                <div class="nomre">
-                    <p>Nomreni goster</p>
-                    <h4>(070) 300-03-..</h4>
+                    <div class="elage2">
+                        <h4>Seher <p class="car-city"></p></h4>
+                        <h4>Marka <p class="car-brand"></p></h4>
+                        <h4>Model <p class="car-model"></p></h4>
+                        <h4>Buraxilis ili <p class="car-year"></p></h4>
+                        <h4>Hansi bazar ucun yigilib <p>Amerika</p></h4>
+                        <h4>Yurus<p class="car-odometer"></p></h4>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <p id="car-dates" style="display: none;"></p>
-    </div>
+            <p id="car-dates" style="display: none;"></p>
+        </div>
+    </main>
     <footer>
         <div class="container" style="display: flex;justify-content: space-between;align-items: center;">
-            <p style="width: 350px;">Saytın Administrasiyası reklam bannerlərinin və yerləşdirilmiş elanların məzmununa görə məsuliyyət
+            <p style="width: 350px;">Saytın Administrasiyası reklam bannerlərinin və yerləşdirilmiş elanların məzmununa
+                görə məsuliyyət
                 daşımır.
             </p>
             <p>2006-2025 Digital Classifieds MMC. VÖEN: 1405631661</p>
         </div>
     </footer>
+    <div class="nav-mobile-bottom">
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <p>ESAS</p>
+        </a>
+        <a onclick="showLikedCars()">
+            <i class="fa-solid fa-heart"></i>
+            <p>SECILMISLER</p>
+        </a>
+        <a href="yeni_elan.html">
+            <i class="fa-solid fa-plus"></i>
+            <p>YENI ELAN</p>
+        </a>
+        <a>
+            <i class="fa-solid fa-user"></i>
+            <p>KABINET</p>
+        </a>
+        <a>
+            <i class="fa-solid fa-bars"></i>
+            <p>DAHA COX</p>
+        </a>
+    </div>
     <script src="script2.js"></script>
 
 </body>
