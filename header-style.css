@@ -163,7 +163,7 @@
         display: none;
     }
     .container{
-        padding-inline:10px;
+        padding-inline:10px !important;
     }
     .nav-mobile{
         display: flex;

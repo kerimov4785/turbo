@@ -612,6 +612,39 @@ footer{
 #none-likes1{
     width: 200px;
 }
+#none-likes1 p{
+    text-align: center !important;
+} 
+.nav-mobile-bottom{
+    justify-content: center;
+    position: fixed;
+    display: none;
+    background-color: white;
+    width: 100%;
+    z-index: 98;
+    bottom: 0px;
+    gap: 50px;
+    padding-block: 10px;
+}
+.nav-mobile-bottom > a{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+}
+.nav-mobile-bottom p{
+    font: 400 9px helvetica;
+    color: #8d94ad;
+}
+.nav-mobile-bottom i {
+    font-size: 20px;
+    color: #8d94ad;
+}
+.nav-mobile-bottom .fa-heart{
+    margin-right: 0 ;
+}
 @media only screen and (max-width: 1010px)  {
     #filter{
         flex-direction: column;
@@ -666,6 +699,14 @@ footer{
     #abc1{
         display: none;
     }
+    .nav-mobile-bottom{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 750px) {
+    #secilmis_cars_box{
+        justify-content: center;
+    }
 }
 @media only screen and (max-width: 530px) {
     .card{
@@ -679,10 +720,18 @@ footer{
     #none-box p{
         font-size: 14px;
     }
+    #none-likes1 p{
+        font-size: 14px !important;
+    }
 }
-@media only screen and (max-width: 385px) {
+@media only screen and (max-width: 460px) {
+    .nav-mobile-bottom{
+        gap: 15px;
+    }
+}
+@media only screen and (max-width: 400px) {
     .card{
-        width: 80%;
+        width: 85%;
     }
     .elanlar{
         row-gap: 30px;
