@@ -414,6 +414,7 @@ input[type = 'checkbox']{
     background-color: white;
     transition: .4s;
     cursor: pointer;
+    height: 261px;
 }
 .card:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
@@ -709,6 +710,7 @@ footer{
 @media only screen and (max-width: 530px) {
     .card{
         width: 180px;
+        height: 240px;
     }
     .card img{
         width: 100%;
@@ -730,6 +732,7 @@ footer{
 @media only screen and (max-width: 400px) {
     .card{
         width: 85%;
+        height: 280px;
     }
     .elanlar{
         row-gap: 30px;
