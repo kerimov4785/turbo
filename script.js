@@ -1474,7 +1474,6 @@ function newCards(a) {
       let cards_all = document.querySelectorAll('.card')
       for (let i = 0; i < cards_all.length; i++) {
         cards_all[i].classList.add(`likes${i}`)
-        console.log(a[i].id);
         cards_all[i].innerHTML +=
           `<i id = '${i}' onclick = like_car(event,'${i}') class="fa-regular fa-heart heart1"></i>
           <i id = '${i}bg' class="fa-solid fa-heart heartbg" style ='visibility:${cars[a[i].id].islike ?'visible' :'hidden'};' ></i>`
